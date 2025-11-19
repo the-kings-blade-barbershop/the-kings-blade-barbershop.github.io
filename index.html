@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> THE KING'S BLADE | Barbershop de Lujo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+
+<header id="main-header">
+    <a href="#" class="logo-link">
+        <img src="../img/logo.png" alt="THE KING'S BLADE Logo" class="logo-img">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="javascript:scrollSuave('#servicios')">SERVICIOS</a></li>
+            <li><a href="javascript:scrollSuave('#galeria')">GALERÍA</a></li>
+            <li><a href="javascript:scrollSuave('#nosotros')">SOBRE NOSOTROS</a></li>
+            <li><a href="javascript:scrollSuave('#testimonios')">TESTIMONIOS</a></li>
+            <li><a href="javascript:scrollSuave('#reserva')" class="btn-reserva">RESERVA</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <h2 class="cinzel-font">DONDE LA REALEZA SE ENCUENTRA CON LA PERFECCIÓN</h2>
+    <p>Expertos en el arte clásico del afeitado y las tendencias modernas del corte.</p>
+    <a href="javascript:scrollSuave('#reserva')" class="boton-dorado ripple-btn">AGENDA TU CITA</a>
+</section>
+
+<section id="servicios" class="reveal">
+    <h2 class="cinzel-font">NUESTROS SERVICIOS</h2>
+    <p class="subtitulo">Precios dignos de un rey. Cada servicio incluye toalla caliente y tratamiento premium.</p>
+
+    <div class="servicios-cards">
+
+        <div class="servicio-card" data-servicio='Corte "The King" ($45.000)'>
+            <h3>Corte "The King"</h3>
+            <p>Diseño de corte premium, lavado y peinado con productos de lujo.</p>
+            <span class="precio">$45.000</span>
+            <button onclick="abrirModal(this.parentNode.getAttribute('data-servicio'))" class="boton-dorado">Reservar</button>
+        </div>
+
+        <div class="servicio-card" data-servicio='Arreglo de Barba Real ($30.000)'>
+            <h3>Arreglo de Barba Real</h3>
+            <p>Perfilado con navaja, tratamiento de aceite y toalla caliente.</p>
+            <span class="precio">$30.000</span>
+            <button onclick="abrirModal(this.parentNode.getAttribute('data-servicio'))" class="boton-dorado">Reservar</button>
+        </div>
+
+        <div class="servicio-card paquete" data-servicio='Paquete Completo ($65.000)'>
+            <h3>Paquete Completo</h3>
+            <p>Corte "The King" + Arreglo de Barba Real. Experiencia total.</p>
+            <span class="precio">$65.000</span>
+            <button onclick="abrirModal(this.parentNode.getAttribute('data-servicio'))" class="boton-dorado">Reservar</button>
+        </div>
+
+        <div class="servicio-card" data-servicio='Afeitado Clásico ($25.000)'>
+            <h3>Afeitado Clásico</h3>
+            <p>Afeitado a navaja, tres pases y loción after-shave. Tradición pura.</p>
+            <span class="precio">$25.000</span>
+            <button onclick="abrirModal(this.parentNode.getAttribute('data-servicio'))" class="boton-dorado">Reservar</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="nosotros" class="reveal">
+    <h2 class="cinzel-font">NUESTRA FILOSOFÍA</h2>
+    <p>En **THE KING'S BLADE**, creemos que el corte de pelo es un ritual. Nuestro equipo de barberos maestros está entrenado en técnicas tradicionales y modernas para ofrecer una experiencia inigualable en un ambiente de lujo y exclusividad.</p>
+
+    <div class="contador-experiencia">
+        <div class="contador-item">
+            <span class="cinzel-font" id="contador" data-target="15">0</span>
+            <p>AÑOS DE EXPERIENCIA</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonios" class="reveal">
+    <h2 class="cinzel-font">LO QUE DICEN LOS REYES</h2>
+    <div class="testimonios-carrusel">
+        <div class="testimonio-slider">
+            <div class="testimonio-card">
+                <p>"La mejor barbería en la que he estado. El detalle y la precisión de 'The King's Blade' no tienen comparación. ¡Volveré sin dudarlo!"</p>
+                <cite>— Marco Aurelio C.</cite>
+            </div>
+            <div class="testimonio-card">
+                <p>"Un servicio que justifica el precio. La toalla caliente y el trato personalizado te hacen sentir como realeza. ¡Impresionante experiencia!"</p>
+                <cite>— Alejandro V.</cite>
+            </div>
+            <div class="testimonio-card">
+                <p>"Mi corte de barba nunca había sido tan perfecto. La atmósfera y la música son ideales para desconectar. ¡Altamente recomendado!"</p>
+                <cite>— Fernando G.</cite>
+            </div>
+        </div>
+        <button class="carrusel-btn prev-testimonio">&lt;</button>
+        <button class="carrusel-btn next-testimonio">&gt;</button>
+    </div>
+</section>
+
+<section id="galeria" class="reveal">
+    <h2 class="cinzel-font">OBRAS DE ARTE</h2>
+
+    <div class="galeria-carrusel">
+        <div class="galeria-slider">
+            <img src="../img/corte1.jpg" alt="Corte de pelo fade y textura">
+            <img src="../img/barba1.jpg" alt="Arreglo de barba con perfilado nítido">
+            <img src="../img/corte2.jpg" alt="Corte clásico peinado hacia atrás">
+            <img src="../img/barba2.jpg" alt="Barba completa y arreglada">
+        </div>
+        <button class="carrusel-btn prev-galeria">&lt;</button>
+        <button class="carrusel-btn next-galeria">&gt;</button>
+    </div>
+</section>
+
+<section id="reserva" class="reveal">
+    <h2 class="cinzel-font">ASCIENDE AL TRONO DEL ESTILO</h2>
+    <p>Visítanos o agenda tu cita. La excelencia te espera.</p>
+    <address class="contacto-info">
+        Calle Falsa 123, El Reino, Ciudad.
+    </address>
+    <p class="contacto-info">Teléfono: <a href="tel:..." class="link-dorado">+XX XXX XXX XXXX</a></p>
+    <p class="contacto-info">Horario: Mar - Sáb, 10:00 AM - 8:00 PM</p>
+    <a href="javascript:manejarReserva();" class="boton-dorado ripple-btn" style="margin-top: 20px;">
+        RESERVA EN LÍNEA
+    </a>
+</section>
+
+<footer>
+    <p>THE KING'S BLADE &copy; 2025 | Todos los derechos reservados.</p>
+</footer>
+
+<div id="modal-reserva" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+        <h3 class="cinzel-font">RESERVA TU EXPERIENCIA</h3>
+        <p>Servicio seleccionado: <strong id="servicio-seleccionado">No seleccionado</strong></p>
+
+        <form action="#" method="POST" id="form-reserva">
+            <label for="servicio-modal">Servicio Deseado:</label>
+            <select id="servicio-modal" name="servicio" required>
+                <option value="">-- Selecciona un Servicio --</option>
+                <option value='Corte "The King" ($45.000)'>Corte "The King" ($45.000)</option>
+                <option value='Arreglo de Barba Real ($30.000)'>Arreglo de Barba Real ($30.000)</option>
+                <option value='Paquete Completo ($65.000)'>Paquete Completo ($65.000)</option>
+                <option value='Afeitado Clásico ($25.000)'>Afeitado Clásico ($25.000)</option>
+            </select>
+
+            <label for="fecha-hora">Fecha y Hora de Reserva:</label>
+            <input type="text" id="fecha-hora" name="fecha_hora" required placeholder="Selecciona la fecha y hora">
+
+            <label for="nombre">Tu Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Rey Arturo">
+
+            <button type="submit" class="boton-dorado">CONFIRMAR RESERVA</button>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+<script>
+    const modal = document.getElementById('modal-reserva');
+    const formReserva = document.getElementById('form-reserva');
+    const header = document.getElementById('main-header');
+
+    // --- NUEVA FUNCIÓN PARA EL CALENDARIO FLATPIKCR ---
+    function iniciarFlatpickr() {
+        flatpickr("#fecha-hora", {
+            enableTime: true, // Habilita la selección de hora
+            noCalendar: false, // Muestra el calendario
+            dateFormat: "Y-m-d H:i", // Formato de fecha y hora
+            locale: "es", // Establece el idioma español
+            minTime: "10:00", // Hora mínima de reserva
+            maxTime: "20:00", // Hora máxima de reserva
+            minuteIncrement: 30, // Permite seleccionar cada 30 minutos
+            time_24hr: true, // Usa formato de 24 horas
+            disable: [
+                // Deshabilita los domingos (día 0)
+                function(date) {
+                    return (date.getDay() === 0);
+                }
+            ]
+        });
+    }
+    // --------------------------------------------------
+
+    // --- Funciones de Modal ---
+    function abrirModal(servicio = '') {
+        modal.style.display = 'block';
+        if (servicio) {
+            document.getElementById('servicio-seleccionado').textContent = servicio;
+            document.getElementById('servicio-modal').value = servicio;
+        } else {
+            document.getElementById('servicio-seleccionado').textContent = 'No seleccionado';
+            document.getElementById('servicio-modal').value = '';
+        }
+    }
+
+    function cerrarModal() {
+        modal.style.display = 'none';
+        formReserva.reset();
+        document.getElementById('servicio-seleccionado').textContent = 'No seleccionado';
+    }
+
+    function manejarReserva() {
+        abrirModal();
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            cerrarModal();
+        }
+    }
+
+    formReserva.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Obtenemos el valor del campo combinado
+        const fechaHoraSeleccionada = document.getElementById('fecha-hora').value;
+        alert(`¡CITA PARA ${document.getElementById('servicio-modal').value} RESERVADA el ${fechaHoraSeleccionada}! Te contactaremos pronto.`);
+        cerrarModal();
+    });
+
+    // --- Scroll Suave y Barra Sticky ---
+    function scrollSuave(id) {
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+        // Barra de Navegación "Sticky" con Cambio de Estilo
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Animación de Scroll (Reveal)
+        document.querySelectorAll('.reveal').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
+            }
+        });
+
+        // Contador de Experiencia (Animado) - Activación por Scroll
+        const contador = document.getElementById('contador');
+        if (contador && contador.closest('.reveal').classList.contains('active') && !contador.classList.contains('animated')) {
+             iniciarContador(contador);
+        }
+    });
+
+    // --- Lógica del Contador Animado ---
+    function iniciarContador(el) {
+        el.classList.add('animated');
+        const target = parseInt(el.getAttribute('data-target'));
+        let count = 0;
+        const speed = 100;
+
+        const updateCount = () => {
+            if (count < target) {
+                count++;
+                el.textContent = count;
+                setTimeout(updateCount, speed);
+            } else {
+                el.textContent = target;
+            }
+        };
+        updateCount();
+    }
+
+    // --- Carrusel/Slider para la Galería y Testimonios ---
+    function configurarCarrusel(containerSelector, slideSelector, prevBtnSelector, nextBtnSelector, intervalTime) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+
+        const slider = container.querySelector(slideSelector);
+        const slides = Array.from(slider.children);
+        const prevBtn = container.querySelector(prevBtnSelector);
+        const nextBtn = container.querySelector(nextBtnSelector);
+        let currentIndex = 0;
+
+        if (slideSelector === '.testimonio-slider') {
+             slider.style.display = 'flex';
+             slider.style.transition = 'transform 0.5s ease-in-out';
+             slides.forEach(slide => {
+                 slide.style.flexShrink = 0;
+                 slide.style.width = '100%';
+             });
+        }
+
+        function updateSlider() {
+            if (slideSelector === '.galeria-slider') {
+                slides.forEach((slide, i) => {
+                    slide.style.opacity = i === currentIndex ? '1' : '0';
+                });
+            } else if (slideSelector === '.testimonio-slider') {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        if (intervalTime > 0) {
+            setInterval(nextSlide, intervalTime);
+        }
+        updateSlider();
+    }
+
+    // Inicializar Carruseles
+    configurarCarrusel('.galeria-carrusel', '.galeria-slider', '.prev-galeria', '.next-galeria', 5000);
+    configurarCarrusel('.testimonios-carrusel', '.testimonio-slider', '.prev-testimonio', '.next-testimonio', 7000);
+
+    // --- 4. Micro-Interacciones en Botones (Ripple Effect) ---
+    document.querySelectorAll('.ripple-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const size = Math.max(rect.width, rect.height);
+
+            ripple.style.width = ripple.style.height = `${size}px`;
+            ripple.style.left = `${x - size / 2}px`;
+            ripple.style.top = `${y - size / 2}px`;
+
+            ripple.classList.add('ripple');
+
+            const currentRipple = button.querySelector('.ripple');
+            if (currentRipple) {
+                currentRipple.remove();
+            }
+
+            button.appendChild(ripple);
+        });
+    });
+
+    // 🌟 INICIAR EL CALENDARIO después de cargar todo
+    document.addEventListener('DOMContentLoaded', iniciarFlatpickr);
+</script>
+
+</body>
+</html>
